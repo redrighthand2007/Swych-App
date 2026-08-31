@@ -1,6 +1,6 @@
 # Shimmer UI Refactoring Plan
 
-We need to implement Skeleton Loaders (Shimmer Effect) for the `BrowseScreen` and `ProfileScreen` in the CacheDeal app. The architecture has changed from Offline-First Room DB to a Cloud-First Supabase Architecture. 
+We need to implement Skeleton Loaders (Shimmer Effect) for the `BrowseScreen` and `ProfileScreen` in the Swych app. The architecture has changed from Offline-First Room DB to a Cloud-First Supabase Architecture. 
 
 ## Requirements:
 1. `ShimmerEffect.kt` is already available as a modifier: `Modifier.shimmerEffect()`.
