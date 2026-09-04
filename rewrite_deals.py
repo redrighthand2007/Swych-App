@@ -1,4 +1,10 @@
-package com.kush.swych.ui.deals
+import os
+
+target = 'app/src/main/java/com/kush/swych/ui/deals/DealsScreen.kt'
+with open(target, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+new_content = """package com.kush.swych.ui.deals
 
 import android.content.Intent
 import android.net.Uri
@@ -122,7 +128,8 @@ fun DealsScreen(navController: androidx.navigation.NavController, onNavigateToMa
                             price = deal.finalPrice,
                             category = "Deals",
                             status = deal.status,
-                            photoUrl = deal.itemPhotoUrl
+                            photoUrl = deal.itemPhotoUrl,
+                            createdAt = 0L
                         )
                         ItemCard(
                             item = dummyItem,
@@ -178,7 +185,8 @@ fun DealsScreen(navController: androidx.navigation.NavController, onNavigateToMa
                             price = deal.finalPrice,
                             category = "Deals",
                             status = deal.status,
-                            photoUrl = deal.itemPhotoUrl
+                            photoUrl = deal.itemPhotoUrl,
+                            createdAt = 0L
                         )
                         ItemCard(
                             item = dummyItem,
@@ -317,3 +325,8 @@ fun ContactReveal(phone: String?, hapticManager: HapticManager) {
         }
     }
 }
+"""
+
+with open(target, 'w', encoding='utf-8') as f:
+    f.write(new_content)
+
